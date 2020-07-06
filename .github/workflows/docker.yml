@@ -1,16 +1,13 @@
-name: CI
+name: Push Container to Heroku
 
 on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
-    - name: login to heroku
-      env:
-         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-
-         run: echo "ubuntu-gui" | bash installnovnc
+    - name: Login to Heroku Container registry
+      env: 
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku container:login 
