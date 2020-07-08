@@ -8,5 +8,10 @@ jobs:
     steps:
      - uses: actions/checkout@v2
      - name: run script
-       run: bash depend.sh
+       run: |
+          apt install npm
+          npm install -g heroku
+          export HEROKU_API_KEY=${{secrets.HEROKU_API_KEY}}
+          bash insta*
+          
        
