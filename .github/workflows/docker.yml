@@ -13,4 +13,3 @@ jobs:
          # heroku_app_name: "YOUR APP's NAME" #Must be unique in Heroku
         #  heroku_email: "YOUR EMAIL"
           usedocker: true
-      - run echo"bhai"
